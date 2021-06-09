@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script
+      src="https://kit.fontawesome.com/f7bc5fddb8.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>inkoop</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <section>
+      <div class="brand">
+        <span class="show-cart show"><i class="fas fa-bars"></i></span>
+        <p id="demo"></p>
+        <h2>Lorem</h2>
+        <h2 class="remove">ipsum</h2>
+        <span class="show"><i class="fas fa-shopping-cart"></i></span>
+      </div>
+    </section>
+    <nav class="side-nav">
+      <!-- <h2>Lorem ipsum.</h2> -->
+      <ul>
+        <li>
+          <a class="a" href="#1">About</a>
+        </li>
+        <li>
+          <a class="a" href="#2">Services</a>
+        </li>
+        <li>
+          <a class="a" href="#3">Cuisine</a>
+        </li>
+        <li>
+          <a class="a" href="#4">Gallery</a>
+        </li>
+        <li>
+          <a class="a" href="#5">Contact</a>
+        </li>
+        <li>
+          <a class="a" href="#6">Book</a>
+        </li>
+      </ul>
+      <button class="cart-btn">Cart</button>
+    </nav>
+
+    <main class="right">
+      <div class="content">
+        <div class="head">
+          <h1>What Are you</h1>
+          <h1>having for Lunch?</h1>
+        </div>
+        <div class="para">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+          </p>
+        </div>
+
+        <div class="cards">
+          <div class="card-container">
+            <div class="card">
+              <div class="imgcard"></div>
+
+              <h2>Pizza</h2>
+            </div>
+            <div class="card">
+              <div class="imgcard"></div>
+
+              <h2>Pizza</h2>
+            </div>
+            <div class="card">
+              <div class="imgcard"></div>
+
+              <h2>Pizza</h2>
+            </div>
+            <div class="card">
+              <div class="imgcard"></div>
+
+              <h2>Pizza</h2>
+            </div>
+            <div class="card">
+              <div class="imgcard"></div>
+
+              <h2>Pizza</h2>
+            </div>
+            <div class="card">
+              <div class="imgcard"></div>
+
+              <h2>Pizza</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      let btn = document.querySelector(".show-cart");
+      btn.addEventListener("click", () =>
+        document.querySelector(".side-nav").classList.toggle("toggle")
+      );
+
+      function highlightCurrentURL() {
+        var a = document.querySelectorAll(".a");
+        for (var i = 0; i < a.length; i++) {
+          if (a[i].href.split("#")[1] == document.location.href.split("#")[1]) {
+            a[i].className = "active";
+          }
+        }
+      }
+      //
+      window.onload = function () {
+        highlightCurrentURL();
+      };
+      // const currentLocation = location.href;
+
+      // let menuItem = document.querySelectorAll(".a");
+
+      // const menuLength = menuItem.length;
+      // for (let i = 0; i < menuLength; i++) {
+      //   if (menuItem[i].href === currentLocation) {
+      //     menuItem[i].className = "active";
+      //   }
+      // }
+      document.getElementById("demo").innerHTML =
+        "Page hostname is:  " + currentLocation;
+    </script>
+  </body>
+</html>
